@@ -3,6 +3,13 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 //debug (where controls are) vvvv
 import * as dat from 'dat.gui'
+//Loading
+
+// The code below is a loader that loads the textures, especially important to add with a lot of assets
+
+
+const textureLoader = new THREE.TextureLoader();
+const normalTexture = textureLoader.load('/textures/NormalMap.png')
 
 // Debug
 const gui = new dat.GUI()
@@ -21,6 +28,8 @@ const geometry = new THREE.SphereBufferGeometry(.5, 64, 64)
 const material = new THREE.MeshStandardMaterial()
 material.metalness = .7;
 material.roughness = .2;
+material.normalMap = normalTexture;
+
 material.color = new THREE.Color(0x292929)
 
 // Mesh, ties them together. pass in geometry, then material onto geometry
