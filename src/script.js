@@ -63,8 +63,8 @@ scene.add(pointLightHelper);
 
 
 
-const pointLight3 = new THREE.PointLight(0xff0000, 2)
-pointLight3.position.set(-1.1, -1.8, -1.8)
+const pointLight3 = new THREE.PointLight(0x77ff, 2)
+pointLight3.position.set(1.73, 1.13, .14)
 pointLight3.intensity = 10
 scene.add(pointLight3);
 
@@ -76,6 +76,14 @@ light2GUI.add(pointLight3.position, 'x').min(-6).max(6).step(.01)
 light2GUI.add(pointLight3.position, 'z').min(-3).max(3).step(.01)
 light2GUI.add(pointLight3, 'intensity').min(0).max(10).step(.01)
 
+const light2Color = {
+    color: 0xff0000
+}
+
+light2GUI.addColor(light2Color, 'color')
+    .onChange(() => {
+        pointLight3.color.set(light2Color.color)
+    })
 const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
 scene.add(pointLightHelper2);
 /**
