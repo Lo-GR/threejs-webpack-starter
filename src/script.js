@@ -17,8 +17,10 @@ const scene = new THREE.Scene()
 const geometry = new THREE.SphereBufferGeometry(.5, 64, 64)
 
 // Materials, "clothing"
-
-const material = new THREE.MeshBasicMaterial()
+//Standard material is powerful in that it can emulate real world material.
+const material = new THREE.MeshStandardMaterial()
+material.metalness = .7;
+material.roughness = .2;
 material.color = new THREE.Color(0xff0000)
 
 // Mesh, ties them together. pass in geometry, then material onto geometry
