@@ -50,11 +50,13 @@ pointLight2.position.set(-1.1, -1.8, -1.8)
 pointLight2.intensity = 10
 scene.add(pointLight2);
 
+const light1GUI = gui.addFolder('Light 1');
+
 //.add(object, property )
-gui.add(pointLight2.position, 'y').min(-3).max(3).step(.01)
-gui.add(pointLight2.position, 'x').min(-6).max(6).step(.01)
-gui.add(pointLight2.position, 'z').min(-3).max(3).step(.01)
-gui.add(pointLight2, 'intensity').min(0).max(10).step(.01)
+light1GUI.add(pointLight2.position, 'y').min(-3).max(3).step(.01)
+light1GUI.add(pointLight2.position, 'x').min(-6).max(6).step(.01)
+light1GUI.add(pointLight2.position, 'z').min(-3).max(3).step(.01)
+light1GUI.add(pointLight2, 'intensity').min(0).max(10).step(.01)
 
 const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
 scene.add(pointLightHelper);
@@ -66,11 +68,13 @@ pointLight3.position.set(-1.1, -1.8, -1.8)
 pointLight3.intensity = 10
 scene.add(pointLight3);
 
+
+const light2GUI = gui.addFolder('Light 2');
 //.add(object, property )
-gui.add(pointLight3.position, 'y').min(-3).max(3).step(.01)
-gui.add(pointLight3.position, 'x').min(-6).max(6).step(.01)
-gui.add(pointLight3.position, 'z').min(-3).max(3).step(.01)
-gui.add(pointLight3, 'intensity').min(0).max(10).step(.01)
+light2GUI.add(pointLight3.position, 'y').min(-3).max(3).step(.01)
+light2GUI.add(pointLight3.position, 'x').min(-6).max(6).step(.01)
+light2GUI.add(pointLight3.position, 'z').min(-3).max(3).step(.01)
+light2GUI.add(pointLight3, 'intensity').min(0).max(10).step(.01)
 
 const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
 scene.add(pointLightHelper2);
