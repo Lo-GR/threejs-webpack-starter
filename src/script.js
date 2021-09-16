@@ -50,6 +50,10 @@ pointLight2.position.set(1,1,1)
 pointLight2.intensity = 1
 scene.add(pointLight2);
 
+
+gui.add(pointLight2.position, 'y').min(-3).max(3).step(.01)
+
+
 /**
  * Sizes
  */
