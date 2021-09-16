@@ -21,7 +21,7 @@ const geometry = new THREE.SphereBufferGeometry(.5, 64, 64)
 const material = new THREE.MeshStandardMaterial()
 material.metalness = .7;
 material.roughness = .2;
-material.color = new THREE.Color(0xff0000)
+material.color = new THREE.Color(0x292929)
 
 // Mesh, ties them together. pass in geometry, then material onto geometry
 const sphere = new THREE.Mesh(geometry,material)
